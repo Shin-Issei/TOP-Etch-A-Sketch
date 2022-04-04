@@ -39,23 +39,20 @@ makeGrid()
 
 
 function Grid(){
-    // Make one new item and then append it to the end of grid container as a grid item
+    
+
+    function changeNow(){
+        newItem.classList.add("grid-item-hover");
+    
+    }
     const newItem = document.createElement("div");
     newItem.classList.add("grid-item");
+    newItem.addEventListener("mouseover", changeNow)
     gridContainer.appendChild(newItem);
 
 }
 
-function changeNow(){
-    newItem.classList.add("grid-item-hover");
 
-
-let newItem = document.createElement("div");
-newItem.classList.add("grid-item");
-newItem.addEventListener("mouseover", changeNow)
-gridContainer.appendChild(newItem);
-
-}
 
 
 function makeGrid(){
@@ -63,7 +60,7 @@ let i = 0;
 while (i < 16*16){
     Grid();
     i++;
-}
+    }
 }
 
 
