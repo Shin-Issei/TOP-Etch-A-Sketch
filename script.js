@@ -39,14 +39,16 @@ makeGrid()
 
 
 function Grid(){
+    // Make one new item and then append it to the end of grid container as a grid item
+    const newItem = document.createElement("div");
+    newItem.classList.add("grid-item");
+    gridContainer.appendChild(newItem);
 
-// if (arguments[0]){
-// 	out("Hello World!")
-// }
+}
 
 function changeNow(){
     newItem.classList.add("grid-item-hover");
-}
+
 
 let newItem = document.createElement("div");
 newItem.classList.add("grid-item");
